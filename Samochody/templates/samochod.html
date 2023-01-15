@@ -1,0 +1,66 @@
+
+{% extends 'szablon.html'%}
+
+    {% block samochod %}
+        {% if samochod_user %}
+            <h2 style="color:DarkRed"> {{ samochod_user.nazwa }} </h2>
+            <h1 style="text-align:left"> <i> OPIS SAMOCHODU: </i> </h1>
+            <p style="text-align:left"> {{ samochod_user.opis }} </p>
+            <h1 style="text-align:left"> <i> SPECYFIKACJA: </i> </h1>
+            <table style="float:left">
+                <tr>
+                    <th><th> </th></th>
+                    <th> </th>
+                    <th><th> </th></th>
+                </tr>
+                <tr>
+                    <th><th> </th></th>
+                    <th style="float:left"> MARKA: </th>
+                    <th> {{ samochod_user.marka }} </th>
+                    <th><th> </th></th>
+                </tr>
+                <tr>
+                    <th><th> </th></th>
+                    <th> </th>
+                    <th><th> </th></th>
+                </tr>
+                <tr>
+                    <th><th> </th></th>
+                    <th style="float:left">MODEL: </th>
+                    <th>{{ samochod_user.model }}</th>
+                    <th><th> </th></th>
+                </tr>
+                <tr>
+                    <th><th> </th></th>
+                    <th> </th>
+                    <th><th> </th></th>
+                </tr>
+                <tr>
+                    <th><th> </th></th>
+                    <th style="float:left"> ROK PRODUKCJI: </th>
+                    <th>{{ samochod_user.rok }}</th>
+                    <th><th> </th></th>
+                </tr>
+                <tr>
+                    <th><th> </th></th>
+                    <th> </th>
+                    <th><th> </th></th>
+                </tr>
+                <tr>
+                    <th><th> </th></th>
+                    <th style="float:left"> CENA: </th>
+                    <th>{{ samochod_user.cena }} zł</th>
+                    <th><th> </th></th>
+                </tr>
+                <tr>
+                    <th><th> </th></th>
+                    <th> </th>
+                    <th><th> </th></th>
+                </tr>
+            </table>
+
+        {% else %}
+
+        {% endif %}
+
+    {% endblock samochod %}

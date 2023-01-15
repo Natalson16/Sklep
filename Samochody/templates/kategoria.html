@@ -1,0 +1,16 @@
+{% extends 'szablon.html' %}
+
+    {% block samochod_kategorii %}
+
+        {% if kategoria_user %}
+
+            {% for s in samochod_kategorii_user %}
+            <p><a href = "/samochod/{{ s.id }}/"> {{ s.nazwa }} </a>  </p>
+            {% endfor %}
+
+        {% else %}
+
+
+        {% endif %}
+
+    {% endblock %}
